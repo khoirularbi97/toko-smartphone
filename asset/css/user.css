@@ -1,0 +1,596 @@
+.navbar-brand span {
+  color: blueviolet;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+
+.container {
+  font-weight: 700;
+}
+.navbar .navbar-nav a {
+  display: flex;
+  color: blueviolet;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: rgb(234, 234, 238);
+}
+
+.navbar .navbar-nav a::after {
+  display: block;
+  content: "";
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid blueviolet;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.hero {
+  padding: 6rem;
+  min-height: 100vh;
+  background-position: center;
+  position: center;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 100%;
+}
+/* Catalog Start */
+/* Promo section */
+.promos .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+
+.promos .promo-card {
+  justify-content: center;
+  text-align: center;
+  
+  padding: 2rem;
+}
+
+.promos .promo-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.promos .promo-icons a {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: black;
+  margin: 0.3rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promos .promo-icons a .feather {
+  height: 1rem;
+  width: 1rem;
+}
+
+.promos .promo-icons a:hover {
+  background-color: #bbb;
+  border: 1px solid #bbb;
+}
+
+.promos .promo-image {
+  overflow: hidden;
+}
+
+.promos .promo-image img {
+  height: 10rem;
+  transition: 0.5s ease;
+}
+
+.promos .promo-image img:hover {
+  transform: scale(1.3);
+}
+
+.promos .promo-content h3 {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.promos .promo-stars {
+  font-size: 1.7rem;
+  padding: 0.8rem;
+}
+
+.promos .promo-price {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: red;
+}
+
+.promos .promo-price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 0.7rem;
+  color: #bbb;
+}
+.title{
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+  #top-header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #727287;
+  }
+ .footer-link {
+    color: #bbb;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: #d6151c !important;
+    text-decoration: none !important;
+  }
+
+  .footer-link i {
+    margin-right: 8px;
+    color: inherit; /* default ikut teks */
+  }
+
+  /* Icon merah khusus location, phone, mail */
+  .icon-red {
+    color: #d6151c !important; /* langsung merah dari awal */
+  }
+  .top-header {
+    display: none; /* Menyembunyikan top header */
+}
+
+.main-header {
+    background-color: #000;
+    color: #fff;
+    border-bottom: 5px solid #d6151c;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.top-header-icon {
+    color: #d6151c !important; /* Mengubah warna ikon menjadi merah */
+}
+
+.main-header .fa-user,
+.main-header .fa-shopping-cart {
+    color: #d6151c !important; /* Mengubah warna ikon My Account dan Cart menjadi merah */
+}
+
+
+#navigation .navbar-nav .nav-link {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: none;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-bottom 0.3s ease; /* Transisi untuk warna dan padding */
+}
+
+#navigation .navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d6151c; /* Warna garis */
+    transition: width 0.3s ease; /* Transisi untuk lebar garis */
+}
+
+#navigation .navbar-nav .nav-link:hover {
+    color: #d6151c; /* Mengubah warna teks saat hover */
+    text-decoration: none;
+    padding-bottom: 4px;
+}
+
+#navigation .navbar-nav .nav-link:hover::before {
+    width: 100%; /* Garis meluas ke seluruh lebar teks */
+}
+
+
+.header-logo img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+    filter: brightness(0) invert(1);
+}
+
+  /* Warna font utama merah */
+  .custom-account-link {
+  color: red;
+  }
+
+  /* Saat hover, warna font tetap merah */
+  .custom-account-link:hover {
+  color: darkred;
+  text-decoration: none;
+  }
+
+  /* Warna font isi dropdown merah */
+  .custom-dropdown-item {
+  color: red;
+  }
+
+  /* Saat hover di dropdown item */
+  .custom-dropdown-item:hover {
+  color: darkred;
+  background-color: #ffe6e6; /* Background hover dikasih sedikit pink muda */
+  }
+  .store-name {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  }
+  .search-btn {
+    background-color: #d6151c; /* Warna latar belakang merah */
+    color: #fff; /* Warna teks putih */
+    border: none; /* Menghapus border default */
+    font-size: 16px; /* Ukuran font */
+    border-radius: 20px; /* Sudut yang membulat */
+    cursor: pointer; /* Menambahkan efek pointer saat hover */
+    transition: background-color 0.3s ease; /* Transisi halus saat hover */
+}
+
+  .search-btn:hover {
+      background-color: #b11418; /* Warna latar belakang saat hover lebih gelap */
+  }
+  
+
+  .logo-container {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    text-align: center;
+  }
+  .logo-container img {
+    max-width: 60px;  /* Mengatur lebar maksimum logo */
+    height: auto;  /* Memastikan proporsi logo tetap terjaga */
+    margin: 5px;
+  }
+  .logo-xiaomi {
+    max-width: 20px;  /* Mengatur lebar maksimum logo Xiaomi lebih kecil */
+  }
+  .logo-samsung {
+    max-width: 100px;  /* Mengatur lebar maksimum logo Xiaomi lebih kecil */
+  }
+  .footer-container {
+    background-color: #30393f;
+    width: 100%;
+    color: white;
+    padding: 40px 0;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  /* Logo Section */
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1);
+
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  .design-by {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+
+  .design-by a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    color: white;
+    text-decoration: none;
+  }
+
+  .social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .social-icon i {
+    font-size: 16px;
+    color: white;
+  }
+
+  /* Navigation Sections */
+  .nav-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .nav-header {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 15px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    /* Membuat semua link menjadi bold */
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Contact Section */
+  .contact-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .contact-section .nav-header {
+    grid-column: 1 / -1;
+  }
+
+  .contact-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-item {
+    margin-bottom: 15px;
+  }
+
+  .contact-label {
+    font-weight: bold;
+    font-size: 0.85rem;
+    display: block;
+  }
+
+  .contact-value {
+    font-size: 0.85rem;
+  }
+
+  /* Responsive - Large Screens */
+  @media (max-width: 1200px) {
+    .footer-content {
+      padding: 0 30px;
+    }
+  }
+
+  /* Responsive - Medium Screens (Tablets) */
+  @media (max-width: 991px) {
+    .footer-content {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .logo-section {
+      grid-column: 1 / -1;
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .logo img {
+      margin: 0 auto 15px;
+    }
+
+    .social-icons {
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .contact-section {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* Responsive - Small Screens (Mobile) */
+  @media (max-width: 767px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .nav-columns {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .contact-columns {
+      grid-template-columns: 1fr;
+    }
+
+    .nav-links,
+    .contact-group {
+      align-items: center;
+    }
+
+    .contact-item {
+      text-align: center;
+    }
+
+    .social-icons {
+      justify-content: center;
+    }
+  }
+
+  /* Responsive - Extra Small Screens */
+  @media (max-width: 480px) {
+    .footer-container {
+      padding: 30px 0;
+    }
+
+    .footer-content {
+      padding: 0 15px;
+      gap: 30px;
+    }
+
+    .logo img {
+      max-width: 80px;
+    }
+
+    .social-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .social-icon i {
+      font-size: 14px;
+    }
+
+    .contact-item {
+      margin-bottom: 10px;
+    }
+  }
+  /* detail produk */
+  @media (max-width: 768px) {
+    .product-gallery-wrapper {
+      flex-direction: column !important;
+    }
+    .product-gallery img {
+      width: 100% !important;
+      height: auto !important;
+    }
+    .product-details {
+      padding-top: 2rem;
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .product-thumbnails img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-tabs .nav-link {
+    color: #2a3f88;
+    text-decoration: none;
+  }
+  /* produk */
+  .store-header {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .store-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .store-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-img {
+  display: block;        
+  margin: 0 auto;         
+  height: 200px;          
+  width: auto;            
+  max-width: 100%;        
+  object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1rem 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .btn-outline-primary {
+    border-radius: 50px;
+    font-weight: 500;
+  }

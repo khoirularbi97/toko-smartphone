@@ -1,0 +1,8 @@
+{
+    "require": {
+        "google/apiclient": "2.13",
+        "guzzlehttp/guzzle": "^6.2",
+        "firebase/php-jwt": "6.0",
+        "aws/aws-sdk-php": "^3.337"
+    }
+}
