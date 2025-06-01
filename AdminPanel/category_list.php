@@ -7,6 +7,26 @@ $countCategory = mysqli_num_rows($kueriCategory);
 <?php 
 require "tamplate/navbar.php";
 ?>
+
+<!-- Modal -->
+<div class="modal" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ModalLabel">Add Category</h1>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control" placeholder="Masukkan kategori..." aria-label="text">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div id="main-content" class="main-content">
   <div class="conteiner-fluid">
     <nav aria-label="breadcrumb">
@@ -38,9 +58,15 @@ require "tamplate/navbar.php";
       </div>
 
       <!-- Tambah Produk kanan -->
-      <a href="tambah_category.php" class="btn btn-primary">
-        <i data-feather="plus" class="me-1"></i> Add Category
-      </a>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal">
+      <i data-feather="plus" class="me-1"></i> Add
+      </button>
+
+
+      <!-- <a href="#" class="btn btn-primary">
+        <i data-feather="plus" class="me-1"></i> Add
+      </a> -->
     </div>
 
       <div class="table-responsive">
@@ -90,5 +116,6 @@ require "tamplate/navbar.php";
       </div>
     </div>
 </div>
+
   <?php require 'tamplate/footer.php'; ?>
 

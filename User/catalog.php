@@ -1,4 +1,3 @@
-
 <div class="promos" id="promos">
   <div class="section">
     <div class="container">
@@ -10,87 +9,29 @@
         </div>
       </div>
     </div>
-      <div class="container">
+
+    <div class="container">
       <div class="row flex-nowrap overflow-auto">
-          <div class="promo-card d-flex flex-column shadow">
+        <?php foreach ($produk as $value) : ?>
+          <div class="promo-card d-flex flex-column shadow me-3" style="min-width: 200px;">
             <div class="promo-image">
-              <img src="../img/vivo-y22.jpg" alt="Promo 1" />
+              <img src="<?= $value->image ?>" alt="<?= $value->brand ?>" style="width: 100%; height: auto;" />
             </div>
             <div class="promo-content">
-              <h3>Vivo Y22</h3>
-              <div class="promo-price">IDR 1.500.000 <span>IDR 1.750.000</span></div>
+              <h5><?= $value->brand ?></h5>
+              <div class="promo-price">Rp<?= number_format($value->price, 0, ',', '.') ?></div>
             </div>
-            <div class="promo-icons mt-auto">
-              <a href="#"><i data-feather="shopping-cart"></i></a>
-              <a href="#"><i data-feather="eye"></i></a>
-            </div>
-          </div>
-          <div class="promo-card d-flex flex-column shadow">
-            <div class="promo-image">
-              <img src="../img/vivo-y100.jpg" alt="Promo 2" />
-            </div>
-            <div class="promo-content">
-              <h3>Vivo Y100</h3>
-              <div class="promo-price">IDR 3.599.000 <span>IDR 4.100.000</span></div>
-            </div>
-            <div class="promo-icons mt-auto">
-              <a href="#"><i data-feather="shopping-cart"></i></a>
-              <a href="#"><i data-feather="eye"></i></a>
+            <div class="promo-icons mt-auto d-flex gap-2">
+              <a href="#" onclick="addToCart(<?= $value->id_product ?>, '<?= $value->brand ?>', <?= $value->price ?>)">
+                <i data-feather="shopping-cart"></i>
+              </a>
+              <a href="detail.php?id=<?= $value->id_product ?>">
+                <i data-feather="eye"></i>
+              </a>
             </div>
           </div>
-            <div class="promo-card d-flex flex-column shadow">
-              <div class="promo-image">
-                <img src="../img/samsung-galaxy-a51.jpg" alt="Promo 3" />
-              </div>
-              <div class="promo-content">
-                <h3>Samsung Galaxy A51</h3>
-                <div class="promo-price">IDR 1.500.000 <span> IDR 1.750.000</span></div>
-              </div>
-              <div class="promo-icons mt-auto">
-                <a href="#"><i data-feather="shopping-cart"></i></a>
-                <a href="#"><i data-feather="eye"></i></a>
-              </div>
-            </div>
-            <div class="promo-card d-flex flex-column shadow">
-              <div class="promo-image">
-                <img src="../img/oppo-reno6.jpg" alt="Promo 1" />
-              </div>
-              <div class="promo-content">
-                <h3>OPPO Reno 6</h3>
-                <div class="promo-price">IDR 1.500.000 <span> IDR 1.750.000</span></div>
-              </div>
-              <div class="promo-icons mt-auto">
-                <a href="#"><i data-feather="shopping-cart"></i></a>
-                <a href="#"><i data-feather="eye"></i></a>
-            </div>
-            </div>
-            <div class="promo-card d-flex flex-column shadow">
-              <div class="promo-image">
-                <img src="../img/redmi-note13.jpg" alt="Promo 1" />
-              </div>
-              <div class="promo-content">
-                <h3>Redmi Note 13</h3>
-                <div class="promo-price">IDR 1.500.000 <span> IDR 1.750.000</span></div>
-              </div>
-              <div class="promo-icons mt-auto">
-                <a href="#"><i data-feather="shopping-cart"></i></a>
-                <a href="detail.php"><i data-feather="eye"></i></a>
-            </div>
-            </div>
-            <div class="promo-card d-flex flex-column shadow">
-              <div class="promo-image">
-                <img src="../img/realme-note-60.jpg" alt="Promo 1" />
-              </div>
-              <div class="promo-content">
-                <h3>Realme Note 60</h3>
-                <div class="promo-price">IDR 1.500.000 <span> IDR 1.750.000</span></div>
-              </div>
-              <div class="promo-icons mt-auto">
-                <a href="#"><i data-feather="shopping-cart"></i></a>
-                <a href="#"><i data-feather="eye"></i></a>
-            </div>
-            </div>
-          </div>
-      </div> 
-</section>
-<!-- Promo section end -->
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+</div>

@@ -206,10 +206,9 @@ function _hapusSession()
     function cekLoginAdmin()
     {
 
-        if (isset($_SESSION['email'])) {
-            if ($_SESSION['role'] == 1) {
+        if (isset($_SESSION['email']) && isset($_SESSION['role'])) {
+            if ($_SESSION['role'] === 'admin')
                 return true;
-            }
         }
         return false;
     }

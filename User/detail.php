@@ -1,50 +1,43 @@
 <?php
-session_start();
-require '../function/detail.php';
+require '../function/admin.php';
 
 if (isset($_GET['id'])) {
-    $produk = detail($_GET['id'])['produk'];
-    $judul = detail($_GET['id'])['judul'];
+  $id = $_GET['id'];
+  $data = detailProduk($id);
+
+  if (!$data['true']) {
+    echo "<div style='text-align:center; margin-top:20px; color:red;'>{$data['pesan']}</div>";
+    exit;
+  }
+
+  $produk = $data['produk'];
+} else {
+  echo "<div style='text-align:center; margin-top:20px; color:red;'>ID produk tidak ditemukan di URL.</div>";
+  exit;
 }
 ?>
 
-<?php require'tamplate/header.php'?>
+<?php require 'tamplate/header.php' ?>
 
+<?php $produk = $data['produk']; ?>
 <section class="py-5 bg-light">
   <div class="container">
     <div class="d-flex flex-md-row flex-column gap-5 product-gallery-wrapper">
 
       <!-- Product Images -->
       <div class="col-md-6 d-flex justify-content-center align-items-start fade-in">
-        <img src="../img/oppo-reno6.jpg" alt="Smartphone" class="img-fluid rounded shadow-sm w-100" style="max-width: 450px;">
+        <img src="<?= $produk->image ?>" alt="Smartphone" class="img-fluid rounded shadow-sm w-100" style="max-width: 450px;">
       </div>
 
       <!-- Product Details -->
       <div class="col-md-6 fade-in product-details" style="animation-delay: 0.2s;">
-        <h2 class="fw-bold": <?= $product->brand ?>></h2>
-        <div class="mb-2 text-warning">
-          ★★★★☆ <span class="text-muted small">(10 reviews)</span>
-        </div>
+        <h2 class="fw-bold"><?= $produk->brand ?></h2>
         <div class="mb-3">
-          <span class="h4 text-primary">Rp18.499.000</span>
-          <del class="text-muted ms-2">Rp19.999.000</del>
-          <span class="badge bg-danger ms-2">-8%</span>
+          <span class="h4 text-primary">Rp<?= number_format($produk->price, 0, ',', '.') ?></span>
         </div>
         <!-- Stock Availability -->
         <div class="mb-3">
-          <span class="badge bg-success">In Stock: 25</span>
-        </div>
-        <p class="text-muted">
-          Ditenagai Snapdragon 8 Gen 3, kamera 200MP, layar AMOLED 6.8", baterai 5000mAh. Siap menunjang produktivitas dan hiburan Anda.
-        </p>
-
-        <div class="mb-3">
-          <label class="form-label">Warna</label>
-          <select class="form-select">
-            <option>Hitam</option>
-            <option>Putih</option>
-            <option>Violet</option>
-          </select>
+          <span class="badge bg-success">Stock: <?= $produk->stock ?></span>
         </div>
 
         <div class="mb-3">
@@ -61,7 +54,7 @@ if (isset($_GET['id'])) {
           <p><strong>Kategori:</strong> Smartphone, Elektronik</p>
           <p>
             <strong>Bagikan:</strong>
-            <a href="#" class="text-decoration-none text-primary ms-2"><i data-feather ="facebook"></i></a>
+            <a href="#" class="text-decoration-none text-primary ms-2"><i data-feather="facebook"></i></a>
             <a href="#" class="text-decoration-none text-info ms-2"><i data-feather="twitter"></i></a>
             <a href="#" class="text-decoration-none text-danger ms-2"><i data-feather="instagram"></i></a>
           </p>
@@ -83,16 +76,8 @@ if (isset($_GET['id'])) {
     </ul>
     <div class="tab-content pt-3 fade-in" id="productTabContent" style="animation-delay: 0.5s;">
       <div class="tab-pane fade show active" id="desc" role="tabpanel">
-        <p>Smartphone flagship dengan performa tinggi dan fitur canggih. Cocok untuk kebutuhan fotografi, gaming, hingga multitasking berat.</p>
+        <p><?= $produk->description ?></p>
       </div>
-      <div class="tab-pane fade" id="details" role="tabpanel">
-        <p>Layar AMOLED 6.8", Refresh rate 120Hz, Chipset Snapdragon 8 Gen 3, RAM 12GB, Kamera utama 200MP, Baterai 5000mAh dengan fast charging 45W.</p>
-      </div>
-      <div class="tab-pane fade" id="reviews" role="tabpanel">
-        <p>⭐⭐⭐⭐⭐ "Smartphone terbaik yang pernah saya miliki!" - Andi</p>
-        <p>⭐⭐⭐⭐ "Performa kencang, tapi agak panas saat gaming." - Rina</p>
-      </div>
-    </div>
-  </div>
+
 </section>
-<?php require 'tamplate/footer.php'?>
+<?php require 'tamplate/footer.php' ?>

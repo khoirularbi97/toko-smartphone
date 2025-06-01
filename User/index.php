@@ -2,9 +2,10 @@
 session_start();
 require 'tamplate/header.php';
 require '../config/auth.php';
+require '../config/home.php';
 
 // List semua objek di bucket
-
+$produk = home()['produk'];
 
 $images = [];
 if (isset($objects['Contents'])) {

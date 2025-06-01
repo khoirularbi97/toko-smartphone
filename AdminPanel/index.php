@@ -1,12 +1,13 @@
 
 <?php 
+session_start();
 require "tamplate/navbar.php";
 require '../config/auth.php';
 
-//  if (cekLoginAdmin()  === false) {
-//     $_SESSION['pesan'] = "Anda belum masuk!! Silahkan masuk terlebih dahulu!";
-//     header('location:../User/login.php');
-// }
+ if (cekLoginAdmin()  != true) {
+    $_SESSION['pesan'] = "Anda belum masuk!! Silahkan masuk terlebih dahulu!";
+    header('location:../User/login.php');
+}
 ?>
 
 <!-- Main Content -->
