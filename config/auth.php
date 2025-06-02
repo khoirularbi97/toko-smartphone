@@ -90,7 +90,7 @@ function register($post)
     // Eksekusi query
     if (mysqli_query($con, $sql)) {
         $_SESSION['sukses'] = 'Akun berhasil dibuat';
-        return header('location:../User/login.php');
+        return header('location:../user/login.php');
     } else {
         $_SESSION['pesan'] = 'Gagal menyimpan data';
     }
@@ -105,7 +105,7 @@ function register($post)
 //init configuration
 $clientID = '350470421079-fr877s4e8jjadc6cgkhgqfspl33olq5l.apps.googleusercontent.com';
 $clientSecret = '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';
-$redirectUri = 'http://localhost/toko-smartphone/User/login.php';
+$redirectUri = 'http://localhost/toko-smartphone/user/login.php';
 
 //creat client request to access google api
 $client = new Google_Client();
@@ -125,7 +125,7 @@ use Aws\S3\S3Client;
 $s3 = new S3Client([
     'version'     => 'latest',
     'region'      => 'us-east-1',
-    'endpoint'    => 'http://127.0.0.1:9000',
+    'endpoint'    => 'http://203.175.11.9:9000',
     'use_path_style_endpoint' => true,
     'credentials' => [
         'key'    => 'minioadmin',

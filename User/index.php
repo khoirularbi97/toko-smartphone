@@ -10,7 +10,7 @@ $produk = home()['produk'];
 $images = [];
 if (isset($objects['Contents'])) {
     foreach ($objects['Contents'] as $object) {
-        $images[] = "http://127.0.0.1:9000/smartphone/" . $object['Key'];
+        $images[] = "http://203.175.11.9:9000/smartphone/" . $object['Key'];
     }
 }
 ?>
