@@ -24,7 +24,7 @@ function hapusProduk($id)
     $s3 = new S3Client([
         'version'     => 'latest',
         'region'      => 'us-east-1',
-        'endpoint'    => 'http://203.175.11.9:9000',
+        'endpoint'    => 'http://127.0.0.1:9000',
         'use_path_style_endpoint' => true,
         'credentials' => [
             'key'    => 'minioadmin',
@@ -114,7 +114,7 @@ function hapusProduk($id)
     $s3 = new S3Client([
         'version'     => 'latest',
         'region'      => 'us-east-1',
-        'endpoint'    => 'http://203.175.11.9:9000',
+        'endpoint'    => 'http://127.0.0.1:9000',
         'use_path_style_endpoint' => true,
         'credentials' => [
             'key'    => 'minioadmin',
@@ -210,7 +210,7 @@ function ubahProduk($id, $post)
     $s3 = new S3Client([
         'version'     => 'latest',
         'region'      => 'us-east-1',
-        'endpoint'    => 'http://203.175.11.9:9000',
+        'endpoint'    => 'http://127.0.0.1:9000',
         'use_path_style_endpoint' => true,
         'credentials' => [
             'key'    => 'minioadmin',
@@ -299,7 +299,7 @@ function detailProduk($id)
     $produk = mysqli_fetch_object($kueri);
 
     
-    $minioBaseUrl = 'http://203.175.11.99000'; // Sesuaikan jika kamu pakai domain
+    $minioBaseUrl = 'http://127.0.0.1:9000'; // Sesuaikan jika kamu pakai domain
     $bucketName = 'product';
 
     if (!empty($produk->image)) {
